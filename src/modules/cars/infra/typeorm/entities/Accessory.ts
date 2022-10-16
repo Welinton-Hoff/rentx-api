@@ -1,6 +1,7 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
+
 import { Car } from "./Car";
+import { Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from "typeorm";
 
 @Entity("accessories")
 class Accessory {
@@ -16,8 +17,8 @@ class Accessory {
   @Column()
   type: string;
 
-  @OneToOne(type => Car, car => car.accessories)
-  @JoinColumn({name: 'car_id'})
+  @OneToOne((type) => Car, (car) => car.accessories)
+  @JoinColumn({ name: "car_id" })
   car: Car;
 
   constructor() {

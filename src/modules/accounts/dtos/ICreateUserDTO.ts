@@ -1,10 +1,10 @@
 interface ICreateUsersDTO {
-  name: string;
-  password: string;
-  email: string;
-  driver_license: string;
   id?: string;
+  name: string;
+  email: string;
   avatar?: string;
+  password: string;
+  driver_license: string;
 }
 
 export { ICreateUsersDTO };

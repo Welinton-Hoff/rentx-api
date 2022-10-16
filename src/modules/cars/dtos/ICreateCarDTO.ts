@@ -1,20 +1,20 @@
 interface CarDTO {
   id: string;
-  brand: string;
   name: string;
+  brand: string;
   about: string;
   rent: {
-    period: string;
     price: number;
-  },
+    period: string;
+  };
   fuel_type: string;
   thumbnail: string;
   accessories: {
-      type: string;
-      name: string;
-    }[];
+    type: string;
+    name: string;
+  }[];
 
   photos: string[];
 }
 
-export { CarDTO }
+export { CarDTO };

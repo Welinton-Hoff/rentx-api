@@ -13,7 +13,7 @@ export class CreateAccessory1622730946911 implements MigrationInterface {
           },
           {
             name: "car_id",
-            type: "uuid",            
+            type: "uuid",
           },
           {
             name: "name",

@@ -1,15 +1,15 @@
-import { Car } from "@modules/cars/infra/typeorm/entities/Car";
 import {
   Column,
-  CreateDateColumn,
   Entity,
-  JoinColumn,
   ManyToOne,
+  JoinColumn,
   PrimaryColumn,
+  CreateDateColumn,
   UpdateDateColumn,
 } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
 
+import { Car } from "@modules/cars/infra/typeorm/entities/Car";
 @Entity("rentals")
 class Rental {
   @PrimaryColumn()
@@ -31,7 +31,7 @@ class Rental {
   total: number;
 
   @ManyToOne(() => Car)
-  @JoinColumn({ name: 'car_id' })
+  @JoinColumn({ name: "car_id" })
   car: Car;
 
   @CreateDateColumn()

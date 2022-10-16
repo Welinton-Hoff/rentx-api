@@ -1,8 +1,15 @@
-import { Column, CreateDateColumn, Entity, JoinColumn, OneToMany, PrimaryColumn } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
-import { Accessory } from "./Accessory";
+import {
+  Column,
+  Entity,
+  OneToMany,
+  JoinColumn,
+  PrimaryColumn,
+  CreateDateColumn,
+} from "typeorm";
 
-import { Photo } from './Photo';
+import { Photo } from "./Photo";
+import { Accessory } from "./Accessory";
 
 @Entity("cars")
 class Car {
@@ -30,12 +37,12 @@ class Car {
   @Column()
   thumbnail: string;
 
-  @OneToMany(() => Photo, photo => photo.car)
-  @JoinColumn({ name: 'id' })
+  @OneToMany(() => Photo, (photo) => photo.car)
+  @JoinColumn({ name: "id" })
   photos: Photo[];
 
-  @OneToMany(() => Accessory, accessory => accessory.car)
-  @JoinColumn({ name: 'id' })
+  @OneToMany(() => Accessory, (accessory) => accessory.car)
+  @JoinColumn({ name: "id" })
   accessories: Accessory[];
 
   @CreateDateColumn()

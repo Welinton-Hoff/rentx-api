@@ -1,12 +1,12 @@
 import { inject, injectable } from "tsyringe";
 
-import { ICarsRepository } from "../../repositories/ICarsRepository";
 import { Car } from "@modules/cars/infra/typeorm/entities/Car";
+import { ICarsRepository } from "../../repositories/ICarsRepository";
 
 interface ResponseData {
-    created: Car[],
-    updated: Car[],
-    deleted: [],
+  deleted: [];
+  created: Car[];
+  updated: Car[];
 }
 
 @injectable()
@@ -19,12 +19,12 @@ class SyncPullCarsCase {
   async execute(lastPulledVersion: number): Promise<ResponseData> {
     const updated = await this.usersRepository.listByUpdated(lastPulledVersion);
     const created = await this.usersRepository.listByCreated(lastPulledVersion);
-    
+
     return {
       created,
       updated,
       deleted: [],
-    }
+    };
   }
 }
 

@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-import { usersRoutes } from "./users.routes";
-import { authenticateRoutes } from "./authenticate.routes";
-import { rentalRoutes } from "./rental.routes";
 import { carsRoutes } from "./cars.routes";
+import { usersRoutes } from "./users.routes";
+import { rentalRoutes } from "./rental.routes";
+import { authenticateRoutes } from "./authenticate.routes";
 
 const router = Router();
 

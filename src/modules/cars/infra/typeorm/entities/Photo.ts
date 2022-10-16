@@ -1,5 +1,6 @@
-import { Column, Entity, PrimaryColumn, JoinColumn, OneToOne } from "typeorm";
 import { v4 as uuidV4 } from "uuid";
+import { Column, Entity, PrimaryColumn, JoinColumn, OneToOne } from "typeorm";
+
 import { Car } from "./Car";
 
 @Entity("photos")

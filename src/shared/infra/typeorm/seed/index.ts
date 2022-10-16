@@ -2,7 +2,7 @@ import { v4 as uuidV4 } from "uuid";
 import createConnection from "../index";
 
 async function create() {
-  const connection = await createConnection("localhost");  
+  const connection = await createConnection("localhost");
 
   await connection.query(
     `
@@ -75,7 +75,6 @@ async function create() {
       ('${uuidV4()}', '59626707-88c5-4877-9350-07f372c0905a', 'https://storage.googleapis.com/golden-wind/ignite/react-native/images/17.png');
     `
   );
-
 
   connection.close;
 }

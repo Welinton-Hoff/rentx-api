@@ -1,7 +1,7 @@
 import { inject, injectable } from "tsyringe";
 
-import { ICarsRepository } from "../../repositories/ICarsRepository";
 import { Car } from "@modules/cars/infra/typeorm/entities/Car";
+import { ICarsRepository } from "../../repositories/ICarsRepository";
 
 @injectable()
 class ListCarByIdUseCase {

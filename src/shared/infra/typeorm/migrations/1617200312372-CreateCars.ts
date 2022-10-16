@@ -30,15 +30,15 @@ export class CreateCars1617200312372 implements MigrationInterface {
           {
             name: "price",
             type: "numeric",
-          },   
+          },
           {
             name: "fuel_type",
             type: "varchar",
-          }, 
+          },
           {
             name: "thumbnail",
             type: "varchar",
-          },        
+          },
           {
             name: "created_at",
             type: "timestamp",

@@ -13,7 +13,7 @@ export class CreatePhotos1622732558723 implements MigrationInterface {
           },
           {
             name: "car_id",
-            type: "uuid",            
+            type: "uuid",
           },
           {
             name: "photo",

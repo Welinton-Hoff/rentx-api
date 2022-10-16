@@ -1,7 +1,8 @@
-import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
-import { Rental } from "@modules/rentals/infra/typeorm/entities/Rentalt";
-import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 import { inject, injectable } from "tsyringe";
+
+import { Rental } from "@modules/rentals/infra/typeorm/entities/Rentalt";
+import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
+import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 
 @injectable()
 class RentalByUserUseCase {
